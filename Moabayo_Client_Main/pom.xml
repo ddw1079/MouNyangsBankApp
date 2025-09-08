@@ -216,6 +216,20 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			<!-- the appmap plugin element goes to build/plugins -->
+			<plugin>
+				<groupId>com.appland</groupId>
+				<artifactId>appmap-maven-plugin</artifactId>
+				<version>${appmap.maven-plugin-version}</version>
+				<executions>
+					<execution>
+						<phase>process-test-classes</phase>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 
